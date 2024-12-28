@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Attempting to access a non-existent property of an element
+    const myDiv = document.getElementById('myDiv');
+    const nonExistentProperty = myDiv.nonExistentProperty; 
+    console.log(nonExistentProperty); //This will return undefined, but in some cases will not throw an error.
+  </script>
+</body>
+</html>
